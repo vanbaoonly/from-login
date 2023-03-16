@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Đăng ký</title>
+</head>
+
+<body>
+    <div id="container  " class="ctn">
+        <form action="xulysignup.php" method="post" class="form-dk">
+            <h1>Đăng Ký</h1>
+            <div class="form_group">
+                <input type="text" id="" name="name" required>
+                <label class="pding-0-5px" for="">Name </label>
+            </div>
+            <div class="form_group">
+                <input type="text" id="" name="fullname" required>
+                <label class="pding-0-5px" for="">Full Name </label>
+            </div>
+            <div class="form_group ">
+                <input type="password" name="password" class="pas" required>
+                <label class="pding-0-5px" for="">Password</label>
+                <i class="eye gg-eye"></i>
+            </div>
+            <div class="form_group ">
+                <input type="password" name="password2" id="" class="pas1" required>
+                <label class="pding-0-5px" for="">confirmation Password</label>
+            </div>
+            <div class="form_group">
+                <input type="email" name="email" id="email" required>
+                <label class="pding-0-5px" for="">Email</label>
+            </div>
+            <div> <button class="dangky line">Đăng Ký
+                </button>
+            </div>
+            <div>
+                <a href="index.html" class="dk-to-login ">login</a>
+            </div>
+
+        </form>
+
+    </div>
+    <SCript>
+        var togglePassword = document.querySelector('.eye');
+        var passWord = document.querySelector('.pas');
+        var passWord1 = document.querySelector('.pas1');
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            var type = passWord.getAttribute('type') === 'password' ? 'text' : 'password';
+            passWord.setAttribute('type', type);
+            var type = passWord1.getAttribute('type') === 'password' ? 'text' : 'password';
+            passWord1.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('gg-eye-alt');
+        })
+    </SCript>
+    <!-- <script src="js.js"></script> -->
+</body>
+
+</html>
